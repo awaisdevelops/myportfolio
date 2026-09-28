@@ -5,6 +5,7 @@ import { Menu, X, Download } from "lucide-react";
 import clsx from "clsx";
 import { navLinks, personalInfo } from "@/data/resume";
 import { ThemeSwitcher } from "./ThemeSwitcher";
+import { Logo } from "./Logo";
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -35,9 +36,7 @@ export function Header() {
           href="#top"
           className="flex items-center gap-2 font-mono text-lg font-semibold tracking-tight text-ink"
         >
-          <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-accent to-accent-2 text-sm font-bold text-bg">
-            {personalInfo.initials}
-          </span>
+          <Logo className="h-8 w-8 text-[12px]" />
           <span className="hidden sm:inline">{personalInfo.name}</span>
         </a>
 

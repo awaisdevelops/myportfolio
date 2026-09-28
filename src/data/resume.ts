@@ -1,6 +1,5 @@
 export const personalInfo = {
   name: "Muhammad Awais Shafique",
-  initials: "AS",
   role: "Full-Stack & Mobile App Developer",
   focus: "Blockchain & Web3 · AI-Integrated Systems",
   location: "Faisalabad, Pakistan",

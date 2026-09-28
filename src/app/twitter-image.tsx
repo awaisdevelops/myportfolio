@@ -40,11 +40,13 @@ export default async function Image() {
               borderRadius: 18,
               background: "linear-gradient(135deg, #6366f1, #d946ef)",
               color: "white",
-              fontSize: 32,
+              fontSize: 28,
               fontWeight: 700,
+              fontFamily: "monospace",
+              letterSpacing: -1,
             }}
           >
-            {personalInfo.initials}
+            M/S
           </div>
           <div
             style={{
@@ -62,7 +64,7 @@ export default async function Image() {
           style={{
             display: "flex",
             color: "white",
-            fontSize: 68,
+            fontSize: 58,
             fontWeight: 700,
             lineHeight: 1.1,
             marginBottom: 20,
