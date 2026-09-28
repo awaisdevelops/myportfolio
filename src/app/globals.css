@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---------- Theme palettes ---------- */
+/* Each theme defines semantic tokens as "R G B" triplets so Tailwind's
+   alpha-value syntax (e.g. bg-accent/10) keeps working. */
+
+:root,
+.dark-elegance {
+  --color-bg: 8 8 12;
+  --color-surface: 255 255 255;
+  --color-surface-alpha: 0.03;
+  --color-border: 255 255 255;
+  --color-border-alpha: 0.1;
+  --color-ink: 226 232 240;
+  --color-muted: 148 163 184;
+  --color-accent: 167 139 250;
+  --color-accent-2: 217 70 239;
+  --color-scheme: dark;
+}
+
+.minimalist-neutral {
+  --color-bg: 255 255 255;
+  --color-surface: 250 244 232;
+  --color-surface-alpha: 0.6;
+  --color-border: 30 41 59;
+  --color-border-alpha: 0.1;
+  --color-ink: 15 23 42;
+  --color-muted: 71 85 105;
+  --color-accent: 30 58 138;
+  --color-accent-2: 148 163 253;
+  --color-scheme: light;
+}
+
+.pastel-pop {
+  --color-bg: 253 250 255;
+  --color-surface: 245 232 250;
+  --color-surface-alpha: 0.55;
+  --color-border: 168 121 196;
+  --color-border-alpha: 0.18;
+  --color-ink: 63 44 79;
+  --color-muted: 108 86 121;
+  --color-accent: 154 68 181;
+  --color-accent-2: 217 168 42;
+  --color-scheme: light;
+}
+
+.earthy-organic {
+  --color-bg: 250 246 237;
+  --color-surface: 234 225 202;
+  --color-surface-alpha: 0.55;
+  --color-border: 107 91 71;
+  --color-border-alpha: 0.18;
+  --color-ink: 54 43 33;
+  --color-muted: 108 91 71;
+  --color-accent: 45 106 79;
+  --color-accent-2: 141 163 92;
+  --color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: var(--color-scheme);
+}
+
+body {
+  background-color: rgb(var(--color-bg));
+  color: rgb(var(--color-ink));
+}
+
+section[id] {
+  scroll-margin-top: 5rem;
+}
+
+::selection {
+  background-color: rgb(var(--color-accent));
+  color: rgb(var(--color-bg));
+}
+
+:focus-visible {
+  outline: 2px solid rgb(var(--color-accent));
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(var(--color-muted) / 0.35);
+  border-radius: 9999px;
+}
+
+.section-container {
+  @apply mx-auto w-full max-w-6xl px-6 sm:px-8 lg:px-10;
+}
+
+.gradient-text {
+  background-image: linear-gradient(
+    to right,
+    rgb(var(--color-accent)),
+    rgb(var(--color-accent-2))
+  );
+  @apply bg-clip-text text-transparent;
+}
+
+.card-surface {
+  @apply rounded-2xl border shadow-sm backdrop-blur-xl transition-colors;
+  background-color: rgb(var(--color-surface) / var(--color-surface-alpha));
+  border-color: rgb(var(--color-border) / var(--color-border-alpha));
+}
