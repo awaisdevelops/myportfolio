@@ -1,4 +1,4 @@
-# Awais Shafique — Portfolio
+# Muhammad Awais Shafique — Portfolio
 
 A production-grade portfolio built with Next.js 15 (App Router), TypeScript, Tailwind CSS, Framer Motion, and Firebase (Firestore for the contact form).
 

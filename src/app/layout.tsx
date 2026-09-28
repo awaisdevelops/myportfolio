@@ -32,6 +32,7 @@ export const metadata: Metadata = {
   },
   description: personalInfo.summary,
   keywords: [
+    "Muhammad Awais Shafique",
     "Awais Shafique",
     "Full-Stack Developer",
     "Mobile App Developer",
